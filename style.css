@@ -4,6 +4,10 @@ body{
     background-color:#555B65;
     color: #CACCCE;
 }
+*{
+    padding: 0;
+    margin: 0;
+}
 a{
     text-decoration: none;
 }
@@ -14,8 +18,9 @@ a{
 }
 .top-navbar .logo{
     font-family: "Segoe UI Black";
-    font-size: 24px;
-    padding: 36px 17px;
+    font-size: 30px;
+    line-height: 50px;
+    padding: 0 13px;
 }
 .top-navbar .rs{
     color: #E8676B;
@@ -23,24 +28,121 @@ a{
 .top-navbar .card{
     color: #9A9DA2;
 }
-.top-navbar nav{
+.top-navbar .navBox nav{
     float: right;
     font-weight: bold;
     color: #CACCCE;
-    font-size: 13px;
-    padding: 17px 0;
+    font-size: 1px;
+    padding-top: 7px;
 }
-.top-navbar nav ul>li{
+.top-navbar .navBox nav ul{
+    margin:  0;
+}
+.top-navbar .navBox nav ul>li{
     float: left;
     list-style: none;
     margin: 0 17px;
 }
-.top-navbar nav ul>li>a{
+.top-navbar .navBox nav ul>li>a{
     color: #CACCCE;
     border-bottom: 3px solid transparent;
     padding: 12px 0;
     display: block;
 }
-.top-navbar nav ul>li>a:hover{
+.top-navbar .navBox nav ul>li>a:hover{
     border-bottom-color: #E8676B;
+}
+.banner{
+    height: 460px;
+    background-position: center center;
+    background-size: cover;
+}
+.banner .bgColor{
+    background-color:rgba(0,0,0,0.6);
+    height: 460px;
+}
+.top-navbar{
+    position: fixed;
+    width: 100%;
+}
+.top-navbar .navBox{
+    padding: 10px 0;
+}
+.cardBox{
+    max-width: 930px;
+    background-color: white;
+    margin: 0 auto;
+}
+.portrait{
+    float: left;
+}
+.intro{
+    float: left;
+    margin-left: 60px;
+    width: 470px;
+}
+.introBox{
+    padding: 59px 50px 35px 50px;
+}
+.welcome{
+    background-color: #E8676B;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    line-height: 1.1;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 22px;
+}
+.triangle{
+    display: inline-block;
+    border: 10px solid transparent;
+    border-left-color:#E8676B;
+    border-top-width: 0;
+    position: absolute;
+    top: 100%;
+    left: 4px;
+}
+.cardBox h1,
+.cardBox p{
+    color: black;
+}
+.intro dl dt,
+.intro dl dd{
+    float: left;
+    margin: 6px 0;
+    line-height: 20px;
+}
+.intro dl dt{
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    width: 30%;
+}
+.intro dl dd{
+    width: 70%;
+    font-size: 15px;
+}
+hr{
+    margin: 24px 0;
+}
+.media{
+    background-color: #E8676B;
+    text-align: center;
+}
+.media a{
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 20px 12px;
+}
+.media a:hover{
+    background-color: #D05C60;
+}
+.media svg{
+    fill: white;
+    height: 30px;
+    width: 30px;
 }

@@ -7,59 +7,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
+    <script src="//at.alicdn.com/t/font_767850_mhhihil3mzn.js"></script>
+    <style type="text/css">
+        .icon {
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="top-navbar clearfix">
-        <a href="#" class="logo" alt="logo" style="float: left;"> 
-            <span class="rs">RS</span><span class="card">card</span>
-        </a>
-        <nav>
-            <ul class="clearfix">
-                <li><a href="#">关于</a></li>
-                <li><a href="#">技能</a></li>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">博客</a></li>
-                <li><a href="#">日历</a></li>
-                <li><a href="#">联系方式</a></li>
-                <li><a href="#">其他</a></li>
-            </ul>
-        </nav>
+    <div class="top-navbar">
+        <div class="navBox clearfix">
+            <a href="#" class="logo" alt="logo" style="float: left;"> 
+                <span class="rs">RS</span>
+                <span class="card">card</span>
+            </a>
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">技能</a></li>
+                    <li><a href="#">作品</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">日历</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="banner" style="background-image: url(#)"></div>
-    <div class="card">
-        <main>
-            <div class="portrait">
-                <img src="###" alt="头像">
-            </div>
-            <div class="intro">
-                <span class="welcome">Hello</span>
-                <h1>Jason</h1>
-                <p>前端菜鸟</p>
-                <hr>
-                <dl>
-                    <dt>年龄</dt>
-                    <dd>26</dd>
-                    <dt>现居</dt>
-                    <dd>上海</dd>
-                    <dt>邮箱</dt>
-                    <dd>15921363438@163.com</dd>
-                    <dt>电话</dt>
-                    <dd>15921363438</dd>
-                </dl>
+    <div class="banner" style="background-image: url(./img/bgpic.jpg)">
+        <div class="bgColor"></div>
+    </div> 
+    <main>
+        <div class="cardBox">
+            <div class="introBox clearfix">
+                <div class="portrait">
+                    <img src="./img/portrait.jpg" alt="头像">
+                </div>
+                <div class="intro">
+                    <span class="welcome">Hello
+                        <span class="triangle"></span>
+                    </span>
+                    <h1>Jason</h1>
+                    <p>前端菜鸟</p>
+                    <hr>
+                    <dl>
+                        <dt>年龄</dt>
+                        <dd>26</dd>
+                        <dt>现居</dt>
+                        <dd>上海</dd>
+                        <dt>爱好</dt>
+                        <dd>睡觉</dd>
+                        <dt>喜欢运动</dt>
+                        <dd>翻身</dd>
+                        <dt>邮箱</dt>
+                        <dd>15921363438@163.com</dd>
+                        <dt>电话</dt>
+                        <dd>15921363438</dd>
+                    </dl>
+                </div>
             </div>
             <footer class="media">
-                <a href="#"><img src="#" alt="..."></a>
-                <a href="#"><img src="#" alt="..."></a>
-                <a href="#"><img src="#" alt="..."></a>
-                <a href="#"><img src="#" alt="..."></a>
-                <a href="#"><img src="#" alt="..."></a>
-                <a href="#"><img src="#" alt="..."></a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-douyinduanshipin"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-matuwang-zhihufangxingdianji"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                </a>
             </footer>
-            <a href="###" class="button">下载简历</a>
-            <p>暂时没啥项目经历，请直接pass吧</p>
-        </main>
-    </div>
+        </div>
+    </main>
+    <a href="###" class="button">下载简历</a>
+    <p>暂时没啥项目经历，请直接pass吧</p>
     <section>
         <h2>技能</h2>
         <ol>
