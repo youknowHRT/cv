@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color:#555B65;
+    background-color:#EFEFEF;
     color: #CACCCE;
 }
 *{
@@ -10,6 +10,12 @@ body{
 }
 a{
     text-decoration: none;
+}
+h1,h2,h3,h4,h5{
+   font-weight: normal;
+}
+ol,li{
+    list-style: none;
 }
 .clearfix::after{
     content: "";
@@ -71,7 +77,8 @@ a{
 .cardBox{
     max-width: 930px;
     background-color: white;
-    margin: 0 auto;
+    margin: -350px auto 0 auto;
+    box-shadow: 0px 1px 11px 1px rgba(205,207,209,1);
 }
 .portrait{
     float: left;
@@ -80,6 +87,7 @@ a{
     float: left;
     margin-left: 60px;
     width: 470px;
+    
 }
 .introBox{
     padding: 59px 50px 35px 50px;
@@ -145,4 +153,129 @@ hr{
     fill: white;
     height: 30px;
     width: 30px;
+}
+.buttonWrap{
+    text-align: center;
+   margin-top: 30px;
+}
+.buttonWrap a{
+    border: 1px solid #CDCFD1;
+    color: black;
+    padding: 15px 50px;
+    display: inline-block;
+    border-radius: 2px;
+    background-color: transparent;
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.buttonWrap a:hover{
+    box-shadow: 0px 1px 11px 1px rgba(205,207,209,1);
+}
+.experience{
+    text-align: center;
+    color: black;
+    font-family: kaiti;
+    margin: 35px auto;
+}
+section >h2{
+    font-weight: 700;
+}
+.skillClub{
+    text-align: center;
+    max-width: 930px;
+    margin: 0 auto;
+    color: black;
+}
+.skillClub ol>li>h3{
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+.skillClub ol{
+    background-color: white;
+    padding: 0 23px 45px 23px;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    box-shadow: 0px 1px 11px 1px rgba(205,207,209,1);
+}
+.skillClub ol>li{
+    float: left;
+    width: 50%;
+    padding: 38px 15px 0 15px;
+    box-sizing: border-box;
+}
+.skillbar{
+    height: 5px;
+    background-color: #FAE1E1;
+    border-radius: 2px;
+}
+.skillLevel{
+    height: inherit;
+    background-color: #E8676B;
+    width: 50%;
+    border-radius: 2px;
+}
+.portfolio{
+    text-align: center;
+    color: black;
+}
+.portfolio nav{
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.portfolio nav>ol{
+    margin-bottom: 14px;
+}
+.portfolio nav>ol>li{
+    float: left;
+    margin-left: 44px;
+}
+.portfolio nav>ol>li:first-child{
+    margin-left: 0;
+}
+.choiceBar{
+    height: 5px;
+    background-color: white;
+    border-radius: 2px;
+}
+.choicePoint{
+    height: inherit;
+    background-color: #E8676B;
+    width: 33px;
+    border-radius: 2px;
+}
+.portfolio nav .choiceBar.state1 .choicePoint{
+    width: 33px;
+    margin-left: 0;
+}
+.portfolio nav .choiceBar.state2 .choicePoint{
+    width: 33px;
+    margin-left: 77px;
+}
+.portfolio nav .choiceBar.state3 .choicePoint{
+    width: 92px;
+    margin-left: 151px;
+}
+.big,.small{
+    position: absolute;   
+}
+.works{
+    position: relative;
+    max-width: 930px;
+    text-align: center;
+    margin: 0 auto;
+    height: 576px;
+    box-shadow: 0px 1px 11px 1px rgba(205,207,209,1);
+    margin-bottom: 100px;
+}
+#workPic2{
+    left: 636px;
+    top: 0;
+}
+#workPic3{
+    left: 636px;
+    top: 298px;
 }
