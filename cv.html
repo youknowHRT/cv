@@ -9,17 +9,17 @@
     <title>Document</title>
     <script src="//at.alicdn.com/t/font_767850_mhhihil3mzn.js"></script>
     <style type="text/css">
-        .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
-        }
+        .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
+        .siteWelcome{ width: 100%; height: 100%; top: 0; left: 0; background: #888; z-index: 1; position: fixed; display: none; justify-content: center; align-items: center; }
+        .siteWelcome.active{ display: flex; }
     </style>
 </head>
 
 <body>
-    <div class="top-navbar">
+    <div id="siteWelcome" class="siteWelcome active">
+        <div class="loading"></div>
+    </div>
+    <div id="topNavbar" class="top-navbar">
         <div class="navBox clearfix">
             <a href="#" class="logo" alt="logo" style="float: left;"> 
                 <span class="rs">RS</span>
@@ -27,10 +27,24 @@
             </a>
             <nav>
                 <ul class="clearfix">
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">技能</a></li>
-                    <li><a href="#">作品</a></li>
-                    <li><a href="#">博客</a></li>
+                    <li><a href="#siteAbout">关于</a></li>
+                    <li><a href="#siteSkills">技能</a></li>
+                    <li>
+                        <a href="#siteWorks">作品</a>
+                        <ol class="subMenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                        <ol class="subMenu">
+                            <li>博客1</li>
+                            <li>博客2</li>
+                            <li>博客3</li>
+                        </ol>
+                    </li>
                     <li><a href="#">日历</a></li>
                     <li><a href="#">联系方式</a></li>
                     <li><a href="#">其他</a></li>
@@ -41,8 +55,8 @@
     <div class="banner" style="background-image: url(./img/bgpic.jpg)">
         <div class="bgColor"></div>
     </div> 
-    <main>
-        <div class="cardBox">
+    <main >
+        <div data-x id="siteAbout" class="cardBox">
             <div class="introBox clearfix">
                 <div class="portrait">
                     <img src="./img/portrait.jpg" alt="头像">
@@ -98,7 +112,7 @@
         <a href="###">下载简历</a>
     </p>
     <p class="experience">暂时没啥项目经历，请直接pass吧</p>
-    <section class="skillClub">
+    <section data-x class="skillClub" id="siteSkills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -139,7 +153,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section data-x class="portfolio" id="siteWorks">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -157,6 +171,9 @@
             <div class="small" id="workPic3"><img src="./img/work3.jpg" alt=""></div>
         </div>
     </section>
+    <!-- 引入tween.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <script src="./main.js"></script>
     <script>
         work1.onclick=function(){
             forChoice.className='choiceBar state1'

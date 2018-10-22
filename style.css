@@ -1,27 +1,9 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color:#EFEFEF;
-    color: #CACCCE;
-}
-*{
-    padding: 0;
-    margin: 0;
-}
-a{
-    text-decoration: none;
-}
-h1,h2,h3,h4,h5{
-   font-weight: normal;
-}
-ol,li{
-    list-style: none;
-}
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
-}
+body{ margin: 0; padding: 0; background-color:#EFEFEF; color: #CACCCE; }
+*{ padding: 0; margin: 0; }
+a{ text-decoration: none; }
+h1,h2,h3,h4,h5{ font-weight: normal; }
+ol,li{ list-style: none; }
+.clearfix::after{ content: ""; display: block; clear: both; }
 .top-navbar .logo{
     font-family: "Segoe UI Black";
     font-size: 30px;
@@ -37,9 +19,10 @@ ol,li{
 .top-navbar .navBox nav{
     float: right;
     font-weight: bold;
-    color: #CACCCE;
+    /* color: #CACCCE; */
     font-size: 1px;
     padding-top: 7px;
+
 }
 .top-navbar .navBox nav ul{
     margin:  0;
@@ -48,16 +31,53 @@ ol,li{
     float: left;
     list-style: none;
     margin: 0 17px;
+    position: relative;
 }
 .top-navbar .navBox nav ul>li>a{
-    color: #CACCCE;
+    color: inherit;
     border-bottom: 3px solid transparent;
-    padding: 12px 0;
+    padding: 12px 0 2px 0;
+    display: block;
+    
+}
+.top-navbar .navBox nav ul>li.active>a::after,
+.top-navbar .navBox nav ul>li.highlight>a::after{
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    height: 3px;
+    background: #E8676B;
+    border-radius: 2px;
+    animation: slideBorder .5s;
+}
+@keyframes slideBorder{
+    0%{width: 0;}
+    100%{width: 100%;}
+}
+/* 10.21-UD-下拉菜单 */
+.navBox>nav>ul>li>.subMenu{
+    display: none;
+    position: absolute;
+    background: white;
+    color: #797E87;
+    right: 0;
+    top: 100%;
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    animation: slideSubMenu 0.5s;
+}
+@keyframes slideSubMenu{
+    0%{margin-right: 100%}
+    100%{margin-right: 0%;}
+}
+.navBox>nav>ul>li.active>.subMenu{
     display: block;
 }
-.top-navbar .navBox nav ul>li>a:hover{
-    border-bottom-color: #E8676B;
+.navBox>nav>ul>li>.subMenu>li{
+    padding: 3px 5px;
+    white-space: nowrap;
 }
+
 .banner{
     height: 460px;
     background-position: center center;
@@ -70,9 +90,17 @@ ol,li{
 .top-navbar{
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 .top-navbar .navBox{
     padding: 10px 0;
+    color: #CACCCE;
+}
+.top-navbar.sticky .navBox{
+    padding: 0;
+    background: white;
+    color: #3D4451;
+    box-shadow: 0 0 5px rgba(0,0,0,0.25);
 }
 .cardBox{
     max-width: 930px;
@@ -209,16 +237,24 @@ section >h2{
     height: 5px;
     background-color: #FAE1E1;
     border-radius: 2px;
+    overflow: hidden;
 }
-.skillLevel{
+.skillClub .skillbar .skillLevel{
     height: inherit;
     background-color: #E8676B;
     width: 50%;
     border-radius: 2px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+.skillClub.offset .skillbar .skillLevel{
+    transform: translateX(-100%);
 }
 .portfolio{
     text-align: center;
     color: black;
+    max-width: 930px;
+    margin: 0 auto;
 }
 .portfolio nav{
     display: inline-block;
@@ -259,17 +295,17 @@ section >h2{
     width: 92px;
     margin-left: 151px;
 }
-.big,.small{
-    position: absolute;   
-}
 .works{
     position: relative;
-    max-width: 930px;
+    /* max-width: 930px; */
     text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     height: 576px;
     box-shadow: 0px 1px 11px 1px rgba(205,207,209,1);
     margin-bottom: 100px;
+}
+.big,.small{
+    position: absolute;   
 }
 #workPic2{
     left: 636px;
@@ -278,4 +314,17 @@ section >h2{
 #workPic3{
     left: 636px;
     top: 298px;
+}
+/* for loading */
+.loading{ height: 200px; width: 200px;position: relative; }
+.loading::before,.loading::after{ content:''; width: 0px; height: 0px; border-radius:50%; position: absolute; top:0; left:0; right:0; bottom:0; margin:auto; animation:s 3s infinite linear; background: black; }
+.loading::after{ animation-delay:0.75s; }
+@keyframes s{ 0%{ width:0px;height:0px;opacity:1; } 100%{ width:100px;height:100px;opacity:0; } }
+/* UD-1022 */
+[data-x].offset{
+    transform: translateY(100px);
+}
+[data-x]{
+    transform: translateY(0);
+    transition: all .5s;
 }
