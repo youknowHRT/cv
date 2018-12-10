@@ -5,20 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
     <script src="//at.alicdn.com/t/font_767850_mhhihil3mzn.js"></script>
-    <style type="text/css">
-        .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
-        .siteWelcome{ width: 100%; height: 100%; top: 0; left: 0; background: #888; z-index: 1; position: fixed; display: none; justify-content: center; align-items: center; }
-        .siteWelcome.active{ display: flex; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div id="siteWelcome" class="siteWelcome active">
-        <div class="loading"></div>
-    </div>
     <div id="topNavbar" class="top-navbar">
         <div class="navBox clearfix">
             <a href="#" class="logo" alt="logo" style="float: left;"> 
@@ -155,36 +148,49 @@
     </section>
     <section data-x class="portfolio" id="siteWorks">
         <h2>作品集</h2>
-        <nav>
-            <ol class="clearfix">
-                <li id="work1">所有</li>
-                <li id="work2">框架</li>
-                <li id="work3">原生JS&amp;CSS</li>
-            </ol>
-            <div id="forChoice" class="choiceBar state1">
-                <div class="choicePoint"></div>
+           <!-- Slider main container -->
+        <div class="myslide" id="myslide">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img class="swiper-slide" src="./img/1.jpg">
+                    <img class="swiper-slide" src="./img/2.jpg">
+                    <img class="swiper-slide" src="./img/3.jpg">
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-        </nav>
-        <div class="works">
-            <div class="big" id="workPic1"><img src="./img/work1.jpg" alt=""></div>
-            <div class="small" id="workPic2"><img src="./img/work2.jpg" alt=""></div>
-            <div class="small" id="workPic3"><img src="./img/work3.jpg" alt=""></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
+    <section class="messageBoard">
+        <div class="messageWrap" id="messageWrap">
+            <h3>留言板</h3>
+            <ol id="messageList">
+
+            </ol>
+            <form id="postMessageForm" class="postMessageForm" action="">
+                <label for="">ID</label>
+                <input type="text" name="name">
+                <label for="">评论</label>
+                <input type="text" name="content">
+                <input type="submit" value="提交">
+            </form>
+        </div>
+    </section>
+</body>
+    <!-- 轮播 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
     <!-- 引入tween.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
-    <script src="./main.js"></script>
-    <script>
-        work1.onclick=function(){
-            forChoice.className='choiceBar state1'
-        }
-        work2.onclick=function(){
-            forChoice.className='choiceBar state2'
-        }
-        work3.onclick=function(){
-            forChoice.className='choiceBar state3'
-        }
-    </script>
-</body>
-
+    <!-- leanCloud 存储服务 -->
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
+    <!-- 模块化 -->
+    <script src="./js/init-swiper.js"></script>
+    <script src="./js/autoSlide.js"></script>
+    <script src="./js/navbarSticky.js"></script>
+    <script src="./js/smooth-navigation.js"></script>
+    <script src="./js/message.js"></script>
 </html>

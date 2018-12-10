@@ -255,66 +255,13 @@ section >h2{
     color: black;
     max-width: 930px;
     margin: 0 auto;
-}
-.portfolio nav{
-    display: inline-block;
-    margin-top: 30px;
     margin-bottom: 30px;
-    cursor: pointer;
 }
-.portfolio nav>ol{
-    margin-bottom: 14px;
+.portfolio h2{
+    margin:20px 0;
 }
-.portfolio nav>ol>li{
-    float: left;
-    margin-left: 44px;
-}
-.portfolio nav>ol>li:first-child{
-    margin-left: 0;
-}
-.choiceBar{
-    height: 5px;
-    background-color: white;
-    border-radius: 2px;
-}
-.choicePoint{
-    height: inherit;
-    background-color: #E8676B;
-    width: 33px;
-    border-radius: 2px;
-}
-.portfolio nav .choiceBar.state1 .choicePoint{
-    width: 33px;
-    margin-left: 0;
-}
-.portfolio nav .choiceBar.state2 .choicePoint{
-    width: 33px;
-    margin-left: 77px;
-}
-.portfolio nav .choiceBar.state3 .choicePoint{
-    width: 92px;
-    margin-left: 151px;
-}
-.works{
-    position: relative;
-    /* max-width: 930px; */
-    text-align: center;
-    /* margin: 0 auto; */
-    height: 576px;
-    box-shadow: 0px 1px 11px 1px rgba(205,207,209,1);
-    margin-bottom: 100px;
-}
-.big,.small{
-    position: absolute;   
-}
-#workPic2{
-    left: 636px;
-    top: 0;
-}
-#workPic3{
-    left: 636px;
-    top: 298px;
-}
+
+
 /* for loading */
 .loading{ height: 200px; width: 200px;position: relative; }
 .loading::before,.loading::after{ content:''; width: 0px; height: 0px; border-radius:50%; position: absolute; top:0; left:0; right:0; bottom:0; margin:auto; animation:s 3s infinite linear; background: black; }
@@ -327,4 +274,42 @@ section >h2{
 [data-x]{
     transform: translateY(0);
     transition: all .5s;
+}
+/* swiper */
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
+.swiper-slide{
+    background: black;
+}
+.swiper-button-prev,.swiper-button-next{
+    right: 90%;
+    left: auto;
+    background-color: white;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+
+}
+.swiper-button-next{
+    right: auto;
+    left: 90%;
+}
+
+.icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
+
+/* 留言板 */
+.messageBoard{
+    max-width: 930px;
+    color:black;
+    margin: 50px auto;
+    box-shadow: 0px 1px 11px 1px rgba(205,207,209,1);
+    background: white;
+}
+.messageBoard .messageWrap > h3{
+    font-weight: bold;
+}
+.postMessage{
+    margin: 50px 50px;
 }
