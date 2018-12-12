@@ -305,7 +305,18 @@ section >h2{
     color:black;
     margin: 50px auto;
     box-shadow: 0px 1px 11px 1px rgba(205,207,209,1);
-    background: white;
+    background: #FAFAFA;
+}
+.messageWrap{
+    padding: 20px 30px;
+}
+.messageWrap ol{
+    border-top: 1px solid #F0F0F0;
+
+}
+.messageWrap ol li{
+    padding: 10px 20px;
+    border-bottom: 1px solid #F0F0F0;
 }
 .messageBoard .messageWrap > h3{
     font-weight: bold;
