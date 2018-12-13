@@ -36,8 +36,8 @@
           let array=messages.map((item)=>item.attributes)
           array.forEach((item)=>{
             let li =document.createElement('li')
-            li.innerText=`${item.name}: ${item.content}`
-            this.messageList.append(li)
+              li.innerText=`${item.name}: ${item.content}`
+              this.messageList.append(li)
           })
         }
       )
@@ -46,12 +46,22 @@
         this.form.addEventListener('submit',(e)=>{
         e.preventDefault()
         this.getMessage()
+        console.log('2')
       })
     },
     getMessage:function(){
       let myForm=this.form;
       let content=myForm.querySelector('input[name=content]').value;
       let name=myForm.querySelector('input[name=name]').value;
+      //  禁止写入空白内容
+      if(content ==''){
+        alert('请输入评论')
+        return false;
+      }else if(name==''){
+        alert('请输入用户名')
+        return false;
+      }
+
       var Message = AV.Object.extend('Message')
       var message = new Message();
       message.save({
@@ -65,10 +75,5 @@
       })
     }
   }
-
   controller.init(view,model)
-
-  
-
-  
 }.call()
